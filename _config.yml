@@ -1,0 +1,13 @@
+# Site settings
+title: Don't Fold, Spindle or Mutilate
+#email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Blog of mathematics and analysis of data, learning, and building stuff written by Ben Keller (no, sorry, not that Ben Keller).
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: vinegarbin
+github_username:  bjkeller
+#linkedin_username: bjkeller
+
+# Build settings
+markdown: kramdown
