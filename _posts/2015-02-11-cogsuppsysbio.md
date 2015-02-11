@@ -8,7 +8,7 @@ I'm not one for hyperbole, so I had headed down a track that I wasn't prepared t
 
 What was going to be the subject for *spindle* or *mutilate*?
 
-What is interpreting incidence data as a matrix? Is it mutilating or spindling? Both are a little over the top. So,each time I started, I would decide that what I'd picked wasn't really either.
+What is interpreting incidence data as a matrix? Is it mutilating or spindling? Both are a little over the top. So, each time I started writing, I would decide that what I'd picked wasn't really either.
 
 Of course, that previous post hints at the gist of what I want to get across, which is that the problem we solve should come from the people for whom we are solving it.
 So, while it is easy to think of folding an incidence into a concept graph, that is just an example: we are doing analysis or solving problems for people who have their own ways of thinking about them, and we have to find ways to honor those ways of thinking or we are wasting our time.
@@ -31,3 +31,5 @@ In thinking about my work with Barbara, and what I've learned since, these are t
 3. *Any analysis is part of a larger question*. Users need to be able to take the results of one analysis and use it as input to another. Also, relevance or significance is determined by the global question, so we need to be careful in filtering.
 4. *Understand how biologists think about their tasks*. I've spent a lot of time working directly with scientists formulating questions, but this is expensive. So, basically, this means we need to engage in cognitive task analysis, and should build off of cognitive models of experts' work whenever possible.
 5. *Embrace the uncertainty.* In other words, be "agile". (We'll have to get back to this one.)
+
+I expect I'll come back to some of these, but, for others, I'll have to try to remember to keep them in context as I discuss solving different problems, or evaluate different tools.  
