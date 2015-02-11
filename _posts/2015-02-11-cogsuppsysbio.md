@@ -32,4 +32,4 @@ In thinking about about what I learned working with Barbara, and what I've learn
 4. *Understand how biologists think about their tasks*. I've spent a lot of time working directly with scientists formulating questions, but this is expensive. So, basically, this means we need to engage in cognitive task analysis, and should build off of cognitive models of experts' work whenever possible.
 5. *Embrace the uncertainty.* In other words, be "agile". (We'll have to get back to this one.)
 
-I expect I'll come back to some of these, but, for others, I'll have to try to remember to keep them in context as I discuss solving different problems, or evaluating different approaches.  
+I expect I'll come back to some of these, but others will probably show up behind the scenes.
