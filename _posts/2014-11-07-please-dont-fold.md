@@ -12,12 +12,11 @@ But, incidence data has dominated nearly everything I've done for the 15 years s
 Naren was interested in recommender systems --- and when we first sat down
 together, he sketched out how some different algorithms worked, and we started
 exploring how they are all kind of the same.
-The ratings in collaborative filtering can be viewed as a weighted
+
+Now, the ratings in collaborative filtering can be viewed as a weighted
 bipartite graph.
-When getting started, it is always easier to go with the simplest
-possible examples.
-So, the first thing we did is drop the weights, which gives us
-something like this silly little graph.
+But, when getting started, it is always easier to go with the simplest
+possible examples, so, the first thing we did is drop the weights, which gives us something like this silly little graph.
 
 ![Bipartite graph of user ratings of food items](/figures/foldnot/abby-bipartite.svg "A rating graph of users and foods")
 
@@ -61,15 +60,14 @@ in particular, a project with Rich McEachin at U.Michigan where I mined terms
 from descriptions of genes and we used them to look at the "jumps"
 between blocks of genes for genetically implicated regions of the genome.
 Rich dubbed this approach [PDG-ACE][Keller].
-As a result, I found myself working on projects with other researchers and
-developers at the [NCIBI](http://ncibi.org), a nationally funded center with
+Because of this project, I found myself working on projects with other researchers and developers at the [NCIBI](http://ncibi.org), a nationally funded center with
 the goal of building tools that biomedical scientists could use to understand
 disease at a molecular level.
 
 Rich and I really hadn't been looking at the induced graph, but others were.
 In particular, before the center started, Dan Rhodes had been using concept
 graphs to explore relationships among cancer genes, and his graduate work
-eventually led to [Oncomine](http://www.oncomine.org). This graph-based approach
+eventually led to [Oncomine](http://www.oncomine.org). If we start with a bipartite graph with genes and concept attributes, the concept graph is the graph induced between attributes just like we had done for recommender data. This graph-based approach
 became one of the tools in the arsenal of the center.
 
 My role in the center shifted to working with biomedical
@@ -79,7 +77,7 @@ who studies how people think about and do their work.
 
 Barbara had done a study of users of the center tools.
 One of the things she [observed][Mirel] was that when making queries
-users wanted to be able use conjunctions to explore the data.  For instance, they might want to see genes known to be involved in kidney disease, known to be active in the epithelium, and involved in ion transport.
+users wanted to be able to use conjunctions to explore the data.  For instance, they might want to see genes known to be involved in kidney disease, known to be active in the epithelium, and involved in ion transport.
 Nearly every tool that had been built at the center allowed the user
 to explore single annotations of genes --- the concept graph allows us
 to see when they intersect --- in other words, a conjunction of two "concepts".
@@ -106,7 +104,7 @@ annotations successively, and explore which genes belong together. The concept
 graph is clearly emphasizing the wrong thing: the size of a vertex is proportional
 to the number of genes with that annotation, but we are really interested in the
 edges. So, I tried successively building the graph by combining different types
-of annotations --- first as conjunctions of location and functional role.
+of annotations --- first as conjunctions of location and functional role:
 
 ![Concept graph for conjunction of location and function with process](/figures/foldnot/conceptnet2.svg)
 
@@ -116,11 +114,10 @@ this graph:
 
 ![Concept graph for conjunction of location and function and process](/figures/foldnot/conceptnet3.svg)
 
-Now --- I built this graph, and I have a hard time understanding what it means.
+Now --- *I* built this graph, and I have a hard time understanding what it means.
 The annotated sets are clear enough, but the edges are really hard to interpret.
 If we look hard enough, we can see that there are common annotations in the
-pairwise connected conjunctions, but to we have to do some Boolean algebra to
-out what we are looking at. This graph really didn't help me understand the
+pairwise connected conjunctions, but to we have to do some Boolean algebra to figure out what we are looking at. This graph really didn't help me understand the
 information any better, and I decided I needed another way.
 
 This is how I got to Formal Concept Analysis.
@@ -192,7 +189,7 @@ among the sets of genes defined by those particular conjunctions, the concept
 lattice allows us to explore how different conjunctions relate to one another.
 
 This happens to be a nice compact concept lattice. But, they can be very large.
-So, it would be wrong to conclude that these diagrams should be the de facto
+So, it would be wrong to conclude that these diagrams should be the *de facto*
 standard for visualizing incidence data. However, the lattice *does* make explicit
 all of the relationships based on commonality that are in the data, and this is
 a problem that occurs over and over again when we deal with data like this.
@@ -209,15 +206,15 @@ a representation for a problem that looks like a graph problem. But, the result
 is that I've spent a lot of time looking at incidence data in the wrong way.
 
 A concept lattice captures relationships of commonality within a data set in a
-way that a concept graph cannot. When we build a jumping connections/concept 
-graph from incidence data we get hints of higher order relationships --- the 
-concepts show up as cliques in the graph, but we'd have to work really hard to 
-go beyond conjunctions of two annotations. And, we have to work even harder get 
-any hint of different ways that the annotations are related as shown by the 
+way that a concept graph cannot. When we build a jumping connections/concept
+graph from incidence data we get hints of higher order relationships --- the
+concepts show up as cliques in the graph, but we'd have to work really hard to
+go beyond conjunctions of two annotations. And, we have to work even harder get
+any hint of different ways that the annotations are related as shown by the
 lattice structure.
 
-I can remember bioinformatics projects where we generated a concept graph, and 
-then used graph analysis tools to find the cliques, and then, for each, had to 
+I can remember bioinformatics projects where we generated a concept graph, and
+then used graph analysis tools to find the cliques, and then, for each, had to
 back up and figure out what they meant. *Ouch*. But, no more.
 
 So, seriously, don't fold your incidence data. Or, if you must, take a look at
