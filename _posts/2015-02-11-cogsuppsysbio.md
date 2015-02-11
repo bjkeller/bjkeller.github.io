@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Forget the spindling and the mutilating: it's the people"
+title: "Forget the data spindling and mutilating: it's about the peoples"
 date: 2015-02-11
 ---
 
