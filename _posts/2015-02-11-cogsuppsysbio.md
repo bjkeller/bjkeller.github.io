@@ -4,7 +4,7 @@ title: "Forget the spindling and the mutilating: it's the people"
 date: 2015-02-11
 ---
 
-I'm not one for hyperbole, so I had headed down a track that I wasn't prepared to follow when I started my posts by being clever with the ["please don't fold" story](2014-11-07-please-dont-fold.md) as a spin off the title of the site.
+I'm not one for hyperbole, so I had headed down a track that I wasn't prepared to follow when I started my posts by being clever with the ["please don't fold" story](http://bjkeller.github.io/2014/11/07/please-dont-fold.html) as a spin off the title of the site.
 
 What was going to be the subject for *spindle* or *mutilate*?
 
