@@ -41,9 +41,9 @@ In [this interview](https://youtu.be/5QZ8BkCi420), Singh talks about how Topolog
 Data Analysis (TDA) can be traced back to "old mathematics". My perspective on data
 comes from a different version of *old math used in new ways*, which in this case
 traces back to Galois indirectly through Birkhoff in the 1940s, and resurrected
-by Wille in the 1970s. The approach is called Formal Concept Analysis (FCA), but
-it is based on a pair of maps between, in our example, sets of customers and sets
-of products that is called a *Galois connection*, that are induced by the data set.
+by Wille in the 1970s. The approach is called Formal Concept Analysis (FCA), and
+is based on a pair of maps between, in our example, sets of customers and sets
+of products, that are induced by the data set. This pair of maps is called a *Galois connection*.
 
 What the Galois connection looks like is simplest when the data just reflects a
 simple relationship like "Ben bought green curry paste".
