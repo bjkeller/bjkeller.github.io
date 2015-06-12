@@ -84,8 +84,8 @@ that we get a similar double exponential to before (with appropriate hand waivin
 
 But, there are a lot of hypotheses that we don't even need to consider.
 How many? Well, I generally work on the "product"-side of the Galois connection, and
-am always a little leery of calculations I haven't done before. Especially those
-based on duality, so let's flip perspectives. From the product perspective,
+am always a little leery of calculations I haven't done before, especially those
+based on duality. So, let's flip perspectives. From the product perspective,
 for each individual interesting hypothesis involving $$p$$ products,
 there can be up to $$2^{m-p}$$ that we don't even have to look at because they
 are implied by the first. This suggests that as long as $$p$$ is small for each
