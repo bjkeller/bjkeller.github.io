@@ -13,10 +13,8 @@ The argument goes like this, say we have a table of $$n$$ customers with $$m$$
 products, then
 
 1. we have $$N = nm$$ cells in the table;
-2. each hypothesis over this data is a selection of entries in the table, so the
-number of hypotheses is $$2^N$$; and
-3. the size of the data set is growing exponentially with time $$t$$ as $$\beta^t$$, and
-so the number of hypotheses is growing proportionally to $$2^{\beta^t}$$.
+2. each hypothesis over this data is a selection of entries in the table, so the number of hypotheses is $$2^N$$; and
+3. the size of the data set is growing exponentially with time $$t$$ as $$\beta^t$$, and so the number of hypotheses is growing proportionally to $$2^{\beta^t}$$.
 
 This big number allows Singh to make a quick point in a context where exponentials
 are the story, and I'm with him that we do need to exploit the mathematics of data to find the interesting
@@ -30,10 +28,8 @@ But, the size of the hypothesis space is not $$2^{nm}$$.
 
 Why? As Singh describes them, each hypothesis is a selection of a set of customers and products.
 So, the hypothesis space is all pairs of subsets of customers with subsets of products.
-Formally, this is the cross product $$2^n\times 2^m$$ where $$2^n$$ is the powerset of a
-set of $$n$$ elements.
-This cross product has $$2^n\cdot 2^m$$ pairs. So, the maximum number of hypotheses
-is $$2^{n+m}$$. Definitely a smaller, yet still big, number.
+Formally, this is the cross product $$2^n\times 2^m$$ where $$2^n$$ is the powerset of a set of $$n$$ elements.
+This cross product has $$2^n\cdot 2^m$$ pairs. So, the maximum number of hypotheses is $$2^{n+m}$$. Definitely a smaller, yet still big, number.
 
 ## Different "old math used in new ways" (and an even smaller big number)
 
