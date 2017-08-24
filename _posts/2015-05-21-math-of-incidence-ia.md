@@ -242,7 +242,7 @@ right way. Things that could be more natural from this perspective include
 defining (information) measures over a concept lattice, studying the Galois connection
 as an algebraic object, and using constructions within the incidence algebra to
 suggest different algorithmic strategies. I'm not sure I will go to either of the
-latter two in these notes, but they will at least hint.
+latter two in these notes, but will at least hint.
 
 Before proceeding with incidence algebras, I will switch back to the concept analysis perspective to look at attribute
 logic, and relate it back to intervals and dependencies in the lattice.
