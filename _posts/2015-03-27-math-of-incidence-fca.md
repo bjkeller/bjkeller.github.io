@@ -122,7 +122,7 @@ This construction gives us the basic idea of formal concept analysis – that ce
 ##Formal concepts and the concept lattice
 The pairs of sets identified by the Galois connection are the *formal concepts* for the context $$\mathbb{K}(G,M,I)$$ – defined as pairs  $$(A,B)$$ of sets $$A\subseteq G$$ and $$B\subseteq M$$ satisfying $$\phi(A)=B$$ and $$\psi(B)=A$$.
 The set of objects $$A$$ is called the *extent*, and the set of attributes $$B$$ is the *intent*.  In terms of notation, for formal concept $$c$$, the extent is $$\alpha(c)$$, and the intent is $$\beta(c)$$.
-We can use also the closure directly to construct concepts. Given a set $$A\subseteq G$$, we define $$\gamma A=(\psi(\phi(A)),\phi(A))$$, and given a set $$B\subseteq M$$, we define $$\mu B = (\psi(B),\psi(\phi(B)))$$.
+We can use also the closure directly to construct concepts. Given a set $$A\subseteq G$$, we define $$\gamma A=(\psi(\phi(A)),\phi(A))$$, and given a set $$B\subseteq M$$, we define $$\mu B = (\psi(B),\phi(\psi(B)))$$.
 
 The canonical partial order on formal concepts is the *subconcept* order. Define $$(A_1,B_1)\preceq (A_2,B_2)$$ whenever $$A_1\subseteq A_2$$, or, equivalently, whenever $$B_2\subseteq B_1$$.
 The set of concepts over the incidence relation (technically, the formal concept $$\mathbb{K}$$) forms a lattice $$\mathfrak{L}(\mathbb{K})$$ relative to the subconcept order.
