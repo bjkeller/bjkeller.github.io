@@ -16,7 +16,7 @@ Unfortunately, this topic has no general resources other than [Ganter and Wille]
 If you haven't already gone through the [first post](http://bjkeller.github.io/2015/03/27/math-of-incidence-fca.html) on Formal Concept Analysis, start there.
 And, in case you haven't gotten the idea yet, don't expect any proofs.
 
-##Implications of attribute logic
+## Implications of attribute logic
 
 Assume a formal context $$\mathbb{K}=(G,M,I)$$ that consists of a set $$G$$ of objects, a set $$M$$ of attributes, and the incidence relation $$I\subseteq G\times M$$.
 As we have seen before, the relation $$I$$ gives us the functions $$\phi(A)=\{b\in M\,\vert\, (a,b)\in I, a\in A\}$$ for $$A\subseteq G$$, and $$\psi(B)=\{a\in G\,\vert\,(a,b)\in I, b\in B\}$$ for $$B\subseteq M$$.
@@ -108,7 +108,7 @@ Clearly this allows us to build fewer implications, the count being
 
 For our example, this is 42 implications, which is still more than I want to write down, so we either need more rules or a different approach.
 
-##Implications and the lattice
+## Implications and the lattice
 
 Before we get further into reducing our set of implications, let's pause and look at how the
 implications relate to the attribute powerset.
@@ -144,7 +144,7 @@ But even this set of 42 implications makes for a messy diagram as shown here.
 ![The implications with singleton consequence](/figures/moipt3/singleton-rules.svg)
 {: style="text-align: center"}
 
-##Closed sets and bases
+## Closed sets and bases
 
 What we had done to get to this smaller set is to find a rule that allowed us to construct implications from a smaller set, and then decide what the elements of that smaller set were.
 We want to do this again, but in a way that gives us even fewer implications.
