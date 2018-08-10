@@ -9,7 +9,7 @@ After my
 this one is is going to seem a little like I just decided to explore a different
 subject simply because it has "incidence" in its name. This post introduces
 Incidence Algebras, which are generally used in algebraic combinatorics as
-defined by [Rota][Rota64]. Just to confuse matters, the "incidence" in
+defined by [Rota][rota64]. Just to confuse matters, the "incidence" in
 Incidence Algebra has little to do (at least directly) with the incidence
 relation of Formal Concept Analysis. But, the point is not just to explore
 another version of "incidence", the point is that the incidence algebra gives us
@@ -17,7 +17,7 @@ another way to consider lattices using mathematical machinery that is more
 computationally useful, or at least familiar.
 
 The "unadulterated" in the title represents my aspiration to an implicit tagline
-*Most of the Math, with none of the motivation*,
+_Most of the Math, with none of the motivation_,
 but I am trying to remember to be a good mathematical writer and add definitions
 and background for the uninitiated, but if I happen to miss anything, I would
 suggest you find a resource on Abstract Algebra (such this
@@ -27,10 +27,11 @@ first post, and I give relevant definitions here.
 However, this post does have some blatant omissions in the proof department.
 
 ## Rings, Fields and Algebras
+
 I expect that most computational readers have learned linear algebra, but
 not necessarily abstract algebra. So let's fill in the gaps with some definitions.
 
-A *ring* $$(S,+,\cdot,0,1)$$ is a set $$S$$ closed on addition and multiplication,
+A _ring_ $$(S,+,\cdot,0,1)$$ is a set $$S$$ closed on addition and multiplication,
 where addition satisfies
 
 1. $$a+(b+c)=(a+b)+c$$ (associativity)
@@ -41,17 +42,17 @@ where addition satisfies
 multiplication
 
 1. has identity $$1\in S$$, $$1\cdot a=a$$, and
-2. distributes across addition, $$a*(b+c)=a*b+a*c$$.
+2. distributes across addition, $$a*(b+c)=a*b+a\*c$$.
 
-A ring $$R$$ is *associative* if multiplication is associative, and *commutative*
+A ring $$R$$ is _associative_ if multiplication is associative, and _commutative_
 if multiplication commutes. We will generally have associative rings, but incidence
 algebras are non-commutative.
 
-A *field* is a ring with multiplicative inverses.
+A _field_ is a ring with multiplicative inverses.
 The integers $$\mathbb{Z}$$ are a ring, while the real
 numbers $$\mathbb{R}$$ are a field.
 
-A *vector space* over a field $$K$$ is a set $$S$$ with sum and scalar products
+A _vector space_ over a field $$K$$ is a set $$S$$ with sum and scalar products
 $$rv\in S$$ for $$v\in S$$ and $$r\in K$$ such that
 
 1. $$r(v+w)=rv+rw$$,
@@ -61,23 +62,24 @@ $$rv\in S$$ for $$v\in S$$ and $$r\in K$$ such that
 
 for $$r,s\in K$$ and $$v,w\in S$$.
 
-An *algebra* $$(A,+,\ast,0,1)$$ over a field $$K$$ is a set $$A$$ with sum,
+An _algebra_ $$(A,+,\ast,0,1)$$ over a field $$K$$ is a set $$A$$ with sum,
 product and scalar multiplication such that
 
 1. $$(A,+,\ast,0,1)$$ is a ring,
 2. $$(A,+,\cdot)$$ is a vector space over $$K$$,
 3. $$k\cdot (a\ast b)= (k\cdot a)\ast b= a\ast (k\cdot b)$$ for all $$k\in K$$,
-$$a,b\in A$$.
+   $$a,b\in A$$.
 
 ## Incidence Algebra
+
 We are interested mainly in lattices, but the definitions work for posets.
 Remember that the interval $$[p,q]=\{ r\in P\,\vert\, p\leq r\leq q\}$$, for
 elements $$p\leq q$$ of $$P$$. Let $$\mathit{Int}(P)$$ be the set of intervals in
-$$P$$. A poset $$(P,\leq)$$ is *locally finite* if every interval is finite
-([Rota64][Rota64]).
+$$P$$. A poset $$(P,\leq)$$ is _locally finite_ if every interval is finite
+([Rota64][rota64]).
 
 Now, let $$R$$ be an associative ring, and $$P$$ be locally finite.
-The *incidence algebra* of $$P$$, $$\mathit{I}(P)$$, is the set of functions
+The _incidence algebra_ of $$P$$, $$\mathit{I}(P)$$, is the set of functions
 mapping intervals of $$P$$ to $$R$$, which we write as
 $$f:P\times P\rightarrow R$$ with the property $$f(p,q)=0$$ if
 $$p\not\leq q$$, $$p,q\in P$$.
@@ -96,7 +98,7 @@ $$
 for $$k\in R$$, and products defined as the convolution
 
 $$
-(f\ast g)(p,q) = \sum_{p\leq r\leq q} f(p,r) g(r,q).
+(f\ast g)(p,q) = \sum\_{p\leq r\leq q} f(p,r) g(r,q).
 $$
 
 Note that this sum ranges over $$[p,q]$$, which is finite by the locally finite
@@ -110,11 +112,11 @@ The identity element is
 
 $$
 \delta (p,q) = \left\{
-  \begin{array}{ll}
-    1 & \mbox{if}\; p=q\\
-    0 & \mbox{otherwise}
-  \end{array}
-  \right.
+\begin{array}{ll}
+1 & \mbox{if}\; p=q\\
+0 & \mbox{otherwise}
+\end{array}
+\right.
 $$
 
 for $$p,q\in P$$, and the idempotent elements are
@@ -122,14 +124,14 @@ for $$p,q\in P$$, and the idempotent elements are
 $$
 e_p(q,r) =
 \left\{
-  \begin{array}{ll}
-    1 & \mbox{if}\; p = q = r,\\
-    0 & \mbox{otherwise}
-  \end{array}
+\begin{array}{ll}
+1 & \mbox{if}\; p = q = r,\\
+0 & \mbox{otherwise}
+\end{array}
 \right.
 $$
 
-for $$p,q,r\in P$$. An idempotent element satisfies $$e_p*e_p = e_p$$.
+for $$p,q,r\in P$$. An idempotent element satisfies $$e_p\*e_p = e_p$$.
 
 From the combinatorics perspective, a couple of the elements of the incidence
 algebra are especially useful. The first is the function $$\zeta$$ defined by
@@ -138,8 +140,8 @@ The second is the function $$\mu$$, which is the inverse of $$\zeta$$, and gener
 the inclusion-exclusion principle that we see when defining the cardinality of
 a set union: $$|A\cup B|=|A|+|B|-|A\cap B|$$.
 
+## Representations
 
-##Representations
 We can define a formal representation of an incidence algebra by representing
 intervals symbolically: using $$[p,q]$$ as a symbol. We define the product
 as
@@ -147,22 +149,22 @@ as
 $$
 [p,q][r,s] =
 \left\{
-  \begin{array}{ll}
-    [p,s] & \mbox{if}\; q = r,\\
-    0 & \mbox{otherwise}
-  \end{array}
+\begin{array}{ll}
+[p,s] & \mbox{if}\; q = r,\\
+0 & \mbox{otherwise}
+\end{array}
 \right.
 $$
 
 and, then the incidence algebra is $$R$$-linear combinations of intervals
 
 $$
-\sum_{[p,q]\in \mathit{Int}(P)} f(p,q)[p,q]
+\sum\_{[p,q]\in \mathit{Int}(P)} f(p,q)[p,q]
 $$
 
 It is an easy switch to thinking of the symbolic $$[p,q]$$ as matrices. To do
 this we have to enumerate the elements of $$P$$, then the interval $$[x_i,y_j]$$
-corresponds to a $$|P|\times |P|$$ matrix $$e_{ij}$$ with the $$ij$$th-entry
+corresponds to a $$|P|\times |P|$$ matrix $$e\_{ij}$$ with the $$ij$$th-entry
 equal to $$1$$ and all other entries zero. Then elements of the algebra can be
 defined as linear combinations like before, and with product being the matrix
 product.
@@ -200,19 +202,19 @@ structure with a linear extension of the inclusion ordering.
 The fact we can switch into matrix representations is cool enough, but let's pull
 in graphs too.  
 This is going to seem like I just want to reference my
-[dissertation][Keller97] in a post, but really its not (exactly) why.
+[dissertation][keller97] in a post, but really its not (exactly) why.
 We are going to look at a different representation of the incidence that we can
-also use computationally, which *is* something that the reference to my dissertation
+also use computationally, which _is_ something that the reference to my dissertation
 will hint at (but not directly address).
 
 For this, let $$K$$ be a field, and $$\Gamma$$ be
-a directed graph, then the *path algebra* $$K\Gamma$$ consists of $$K$$-linear
+a directed graph, then the _path algebra_ $$K\Gamma$$ consists of $$K$$-linear
 combinations of finite paths of the graph $$\Gamma$$. We can also define the
 incidence algebra this way.
 
-First, remember that $$p\prec q$$ ($$p$$ *covers* $$q$$) means that $$p<q$$ and
+First, remember that $$p\prec q$$ ($$p$$ _covers_ $$q$$) means that $$p<q$$ and
 there is no $$r\in P$$ such that $$p<r<q$$.
-Given a locally finite poset $$P$$, we can create a *covering* graph
+Given a locally finite poset $$P$$, we can create a _covering_ graph
 $$\Gamma = (P,\succ)$$. The covering graph is a simple directed graph where we
 have an arc from $$p$$ to $$q$$ whenever $$p\succ q$$. This is the graph that
 we draw as the Hasse diagram of the lattice except now we draw labeled arcs, and
@@ -228,10 +230,10 @@ we can skip that for now.) For instance, for $$[\{a_1\},\{a_1,a_2,a_3\}]$$ in th
 lattice, we have
 
 $$
-e_{12}\cdot f_{1} + e_{13}\cdot g_{1}
+e*{12}\cdot f*{1} + e*{13}\cdot g*{1}
 $$
 
-##Epilogue
+## Epilogue
 
 My goal is to eventually explain how we can compute over the Galois connection(s)
 derived from an incidence relation to discover dependencies within a data set
@@ -247,17 +249,15 @@ latter two in these notes, but will at least hint.
 Before proceeding with incidence algebras, I will switch back to the concept analysis perspective to look at attribute
 logic, and relate it back to intervals and dependencies in the lattice.
 
-
-[Rota64][Rota64] Rota, G-C.
+[Rota64][rota64] Rota, G-C.
 On the foundations of combinatorial theory.
-*Z. Wahrscheinlichkeitstheorie*,
+_Z. Wahrscheinlichkeitstheorie_,
 **2** (1964) 340--368.
 
-[Keller97][Keller97] Keller, B.J.
-*Algorithms and Orders for Finding non-commutative Gröbner Bases*,
+[Keller97][keller97] Keller, B.J.
+_Algorithms and Orders for Finding non-commutative Gröbner Bases_,
 Ph.D. thesis,
-Virginia Tech,
-1997.
+Virginia Tech, 1997.
 
-[Keller97]:http://scholar.lib.vt.edu/theses/public/etd-405814212975790/etd-title.html
-[Rota64]:http://link.springer.com/article/10.1007%2FBF00531932
+[keller97]: http://scholar.lib.vt.edu/theses/public/etd-405814212975790/etd-title.html
+[rota64]: http://link.springer.com/article/10.1007%2FBF00531932

@@ -6,7 +6,7 @@ date: 2015-02-11
 
 I'm not one for hyperbole, so I had headed down a track that I wasn't prepared to follow when I started my posts by being clever with the ["please don't fold" story](http://bjkeller.github.io/2014/11/07/please-dont-fold.html) as a spin off the title of the site.
 
-What was going to be the subject for *spindle* or *mutilate*?
+What was going to be the subject for _spindle_ or _mutilate_?
 
 What is interpreting incidence data as a matrix? Is it mutilating or spindling? Both are a little over the top. So, each time I started writing, I would decide that what I'd picked wasn't really either.
 
@@ -26,10 +26,10 @@ So, it is easy to look at a question that a scientist has about their data, and,
 
 In thinking about about what I learned working with Barbara, and what I've learned since, these are the quick lessons I take from this perspective:
 
-1. *We see what we recognize.* I have learned to be skeptical about any representational proxies I choose.
-2. *Don't stray too far from the biology* I try to keep original data in the same shape it came in until there is a reason to present it some other way. This is why I like FCA --- the incidence relation is still there. Basically, this means that you can solve problems in your favorite model from discrete math, but be prepare to present results in a way that makes biological sense.
-3. *Any analysis is part of a larger question*. Users need to be able to take the results of one analysis and use it as input to another. Also, relevance or significance is determined by the global question, so we need to be careful in filtering.
-4. *Understand how biologists think about their tasks*. I've spent a lot of time working directly with scientists formulating questions, but this is expensive. So, basically, this means we need to engage in cognitive task analysis, and should build off of cognitive models of experts' work whenever possible.
-5. *Embrace the uncertainty.* In other words, be "agile". (We'll have to get back to this one.)
+1. _We see what we recognize._ I have learned to be skeptical about any representational proxies I choose.
+2. _Don't stray too far from the biology_ I try to keep original data in the same shape it came in until there is a reason to present it some other way. This is why I like FCA --- the incidence relation is still there. Basically, this means that you can solve problems in your favorite model from discrete math, but be prepare to present results in a way that makes biological sense.
+3. _Any analysis is part of a larger question_. Users need to be able to take the results of one analysis and use it as input to another. Also, relevance or significance is determined by the global question, so we need to be careful in filtering.
+4. _Understand how biologists think about their tasks_. I've spent a lot of time working directly with scientists formulating questions, but this is expensive. So, basically, this means we need to engage in cognitive task analysis, and should build off of cognitive models of experts' work whenever possible.
+5. _Embrace the uncertainty._ In other words, be "agile". (We'll have to get back to this one.)
 
 I expect I'll come back to some of these, but others will probably show up behind the scenes.

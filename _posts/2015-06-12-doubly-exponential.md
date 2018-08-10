@@ -35,11 +35,11 @@ This cross product has $$2^n\cdot 2^m$$ pairs. So, the maximum number of hypothe
 
 In [this interview](https://youtu.be/5QZ8BkCi420), Singh talks about how Topological
 Data Analysis (TDA) can be traced back to "old mathematics". My perspective on data
-comes from a different version of *old math used in new ways*, which in this case
+comes from a different version of _old math used in new ways_, which in this case
 traces back to Galois indirectly through Birkhoff in the 1940s, and resurrected
 by Wille in the 1970s. The approach is called Formal Concept Analysis (FCA), and
 is based on a pair of maps between, in our example, sets of customers and sets
-of products, that are induced by the data set. This pair of maps is called a *Galois connection*.
+of products, that are induced by the data set. This pair of maps is called a _Galois connection_.
 
 What the Galois connection looks like is simplest when the data just reflects a
 simple relationship like "Ben bought green curry paste".
@@ -47,7 +47,7 @@ Things gets a little slippery when we add values, but let's ignore that at the m
 
 If you look at my
 [introduction](http://bjkeller.github.io/2015/03/27/math-of-incidence-fca.html) to the
-math in the simple case (warning: *most of the math with none of the motivation*),
+math in the simple case (warning: _most of the math with none of the motivation_),
 you'll see a Galois connection drawn for you. What this illustrates is that the data
 induces maps that, in our customer-product scenario, relate families of sets of customers
 to the representative of a family of sets of products, and families of sets of
@@ -55,7 +55,7 @@ products to the representative of the corresponding set of customers.
 The key point is that the maps can be used to build a closure based on the data
 so that we know, for instance, that "products bought by Ben and Ed"
 are also products bought by Gunnar and Gurjeet.
-The pairs of representative sets are the *formal concepts* of FCA,
+The pairs of representative sets are the _formal concepts_ of FCA,
 and represent classes of the pairs of sets I have been referring to as hypotheses.
 
 The implication of all this is that there are many hypotheses that can be
@@ -88,7 +88,7 @@ are implied by the first. This suggests that as long as $$p$$ is small for each
 interesting hypothesis of the data set, the irrelevant hypothesis space is
 actually what is growing by the double exponential.
 
-So, how much of the data is boring?  My guess is most of it. But, perhaps this
+So, how much of the data is boring? My guess is most of it. But, perhaps this
 supports Gurjeet Singh's point – let's let the mathematics of the data
 guide us in finding the interesting parts – simply because there is a lot of boring to
 sort through.

@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Incidence Data: Please don't fold..."
-date:   2014-11-07 09:03:59
+title: "Incidence Data: Please don't fold..."
+date: 2014-11-07 09:03:59
 ---
+
 ##Jumping connections
 
 The closest I was to data before Naren Ramakrishnan and I started talking research
@@ -44,14 +45,14 @@ items that are similar to ones that Abby likes:
 To get to these graphs, an algorithm might say that a user had to have
 a certain number of ratings; and define a neighborhood based on a
 certain number of neighbors and a certain level of similarity.
-But, in both cases, we end up collapsing diamond shaped subgraphs (or *hammocks*)
+But, in both cases, we end up collapsing diamond shaped subgraphs (or _hammocks_)
 that either link users to users or items to items to edges in a new graph.
 
 ![Relating users or items by similarity collapses common ratings into a single edge of a new graph](/figures/foldnot/hammocks.svg "Hammock subgraphs become edges in user or item graphs")
 
 Seeing that most algorithms operated by measuring similarity over these hammocks,
 we focusing on the induced graphs and studying their properties ---
-we called it ["jumping connections"][Mirza].
+we called it ["jumping connections"][mirza].
 
 ## Concept graphs and Conjunctions
 
@@ -59,7 +60,7 @@ After moving on from VT, I ended up involved in Bioinformatics projects, and,
 in particular, a project with Rich McEachin at U.Michigan where I mined terms
 from descriptions of genes and we used them to look at the "jumps"
 between blocks of genes for genetically implicated regions of the genome.
-Rich dubbed this approach [PDG-ACE][Keller].
+Rich dubbed this approach [PDG-ACE][keller].
 Because of this project, I found myself working on projects with other researchers and developers at the [NCIBI](http://ncibi.org), a nationally funded center with
 the goal of building tools that biomedical scientists could use to understand
 disease at a molecular level.
@@ -76,8 +77,8 @@ And, so it was natural that I would end up working with Barbara Mirel,
 who studies how people think about and do their work.
 
 Barbara had done a study of users of the center tools.
-One of the things she [observed][Mirel] was that when making queries
-users wanted to be able to use conjunctions to explore the data.  For instance, they might want to see genes known to be involved in kidney disease, known to be active in the epithelium, and involved in ion transport.
+One of the things she [observed][mirel] was that when making queries
+users wanted to be able to use conjunctions to explore the data. For instance, they might want to see genes known to be involved in kidney disease, known to be active in the epithelium, and involved in ion transport.
 Nearly every tool that had been built at the center allowed the user
 to explore single annotations of genes --- the concept graph allows us
 to see when they intersect --- in other words, a conjunction of two "concepts".
@@ -85,13 +86,13 @@ I was curious how to use the concept graph for this incremental exploration
 that Barbara had described.
 
 So, for my exploration, I took some gene annotation data I had sitting around
-and constructed this concept graph.  The annotations are from the
+and constructed this concept graph. The annotations are from the
 [Gene Ontology](http://geneontology.org) (GO), commonly used to annotate genes with
 terms from three sub-ontologies: one for the functional role a gene plays,
 another for where a gene occurs in a cell, and a third for the processes to
 which a gene contributes.
 
-![Concept network for a set of genes based on GO annotations.](/figures/foldnot/conceptnet1.svg )
+![Concept network for a set of genes based on GO annotations.](/figures/foldnot/conceptnet1.svg)
 
 The colors indicate the kind of annotation: blue is location, green is function,
 and purple is process. The vertices in the graph correspond to each annotation,
@@ -114,14 +115,13 @@ this graph:
 
 ![Concept graph for conjunction of location and function and process](/figures/foldnot/conceptnet3.svg)
 
-Now --- *I* built this graph, and I have a hard time understanding what it means.
+Now --- _I_ built this graph, and I have a hard time understanding what it means.
 The annotated sets are clear enough, but the edges are really hard to interpret.
 If we look hard enough, we can see that there are common annotations in the
 pairwise connected conjunctions, but to we have to do some Boolean algebra to figure out what we are looking at. This graph really didn't help me understand the
 information any better, and I decided I needed another way.
 
 This is how I got to Formal Concept Analysis.
-
 
 ## Formal Concepts
 
@@ -130,7 +130,7 @@ context of what we were trying to do, but, even there, we had missed something.
 The hammock subgraphs capture the user-user or item-item commonality in terms
 ratings: Abby likes foods that Brian likes, or apples are liked by people who
 like bananas.
-The hammocks virtually *fold* the graph --- projecting to a graph of only users
+The hammocks virtually _fold_ the graph --- projecting to a graph of only users
 or items, and losing the information carried by the other vertices of the
 bipartite rating graph.
 
@@ -153,7 +153,7 @@ It might be that other items are also liked by those users, or the genes have
 common annotations, but those "extras" may tell us something else useful we
 wouldn't have seen otherwise.
 
-In formal concept analysis, these bicliques are called *formal concepts*, and
+In formal concept analysis, these bicliques are called _formal concepts_, and
 ordering the concepts by inclusion on user sets --- our biclique with Abby,
 Brian and Charles comes before the biclique of Abby, Brian, Charles and David
 who all like bananas --- we get what is called the Formal Concept Lattice.
@@ -189,14 +189,13 @@ among the sets of genes defined by those particular conjunctions, the concept
 lattice allows us to explore how different conjunctions relate to one another.
 
 This happens to be a nice compact concept lattice. But, they can be very large.
-So, it would be wrong to conclude that these diagrams should be the *de facto*
-standard for visualizing incidence data. However, the lattice *does* make explicit
+So, it would be wrong to conclude that these diagrams should be the _de facto_
+standard for visualizing incidence data. However, the lattice _does_ make explicit
 all of the relationships based on commonality that are in the data, and this is
 a problem that occurs over and over again when we deal with data like this.
 This means that data explorations can operate over the lattice, allowing us to build
 more intuitive visualizations for particular problems
 (see, for example, my [Graph Annotation](http://www.slideshare.net/BenjaminKeller/graphannotation0714) slides).
-
 
 ## Please, don't fold your incidence
 
@@ -215,12 +214,11 @@ lattice structure.
 
 I can remember bioinformatics projects where we generated a concept graph, and
 then used graph analysis tools to find the cliques, and then, for each, had to
-back up and figure out what they meant. *Ouch*. But, no more.
+back up and figure out what they meant. _Ouch_. But, no more.
 
 So, seriously, don't fold your incidence data. Or, if you must, take a look at
 the concept lattice first...
 
-
-[Keller]: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2646236/ "Keller and McEachin. Identifying hypothetical genetic influences on complex disease phenotypes, BMC Bioinformatics 10(Suppl 2), (2009), S13."
-[Mirel]: http://www.j-biomed-discovery.com/content/4/1/2 "Mirel. Supporting cognition in systems biology analysis: findings on users' processes and design implications, J. Biomedical Discovery and Collaboration 4, 2 (2009)."
-[Mirza]: http://link.springer.com/article/10.1023%2FA%3A1021819901281 "Mirza et al., Studying Recommendation Algorithms by Graph Analysis, JIIS 20, 2 (2003) 131-160."
+[keller]: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2646236/ "Keller and McEachin. Identifying hypothetical genetic influences on complex disease phenotypes, BMC Bioinformatics 10(Suppl 2), (2009), S13."
+[mirel]: http://www.j-biomed-discovery.com/content/4/1/2 "Mirel. Supporting cognition in systems biology analysis: findings on users' processes and design implications, J. Biomedical Discovery and Collaboration 4, 2 (2009)."
+[mirza]: http://link.springer.com/article/10.1023%2FA%3A1021819901281 "Mirza et al., Studying Recommendation Algorithms by Graph Analysis, JIIS 20, 2 (2003) 131-160."
